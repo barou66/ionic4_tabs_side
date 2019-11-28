@@ -5,8 +5,12 @@ const routes: Routes = [
   /*  { path: '', redirectTo: 'home', pathMatch: 'full' },*/
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomePageModule) },
   {
+    path: 'menu',
+    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   /* {
     path: 'tab1',
